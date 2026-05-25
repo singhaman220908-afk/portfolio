@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<title>html</title>
+<style>
+    .social-icons {
+        display: flex;
+        gap: 18px;
+        margin-top: 15px;
+    }
+    .social-icons a {
+        color: white;
+        font-size: 28px;
+        transition: 0.3s;
+    }
+    .social-icons a:hover {
+        color: tomato;
+    }
+    .typing{
+        overflow: hidden;
+        border-right: 3px solid white;
+        white-space: nowrap;
+        width: 0;
+        animation: typing 4s steps(20, end) forwards;
+    }
+    @keyframes typing{
+        from{width: 0;}
+        to{width: 100%;} 
+    }
+    body{
+        background: linear-gradient(135deg, #0f172a, #1e293b, #111827);
+        color: white;
+    }
+    
+    nav{
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(0, 0, 0);
+        padding: 10px;
+    }
+    nav a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-around;
+        padding: 15px;
+        background: rgb(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+    }
+    img{
+        transition: 0.4s;
+        border-radius: 15px;
+    }
+   img:hover{
+        transform: scale(1.05); 
+    }
+    nav a:hover{
+        color: tomato;
+    }
+    button{
+        padding: 10px 15px;
+        border: none;
+        background-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+    <body>
+        <script>
+            let modeBtn = document.getElementById("modeBtn");
+            modeBtn.onclick = function(){
+                document.body.classList.toggle("light-mode");
+                if(document.body.classList.contains("light-mode")){
+                    modeBtn.textContent = "Dark Mode";
+                } else {
+                    modeBtn.textContent = "Light Mode";
+                }
+            }
+        </script>
+        <header>
+            <h1 class="typing">I Build Creative Websites </h1>
+            <p>Front-end Developer | Student | Future Ai Engineer</p>
+        </header>
+<nav>
+        <a target="_blank" href="home page.html">Home</a>
+        <a target="_blank" href="about us.html">About</a>
+        <a target="_blank" href="contact us.html">contact</a>
+        <a target="_blank" href="login.html">login/signup</a>
+        <a target="_blank" href="resume.html">Resume</a>
+</nav>
+<section>
+    <h2>My Skills</h2>
+   <div class="skills">
+    <button>HTML</button>
+    <button>CSS</button>
+    <button>JavaScript</button>
+    <button>Python</button>
+    </div>
+    </section>    
+    <section>
+        <h2>Projects</h2>
+    <div class="projects">    
+        <button><a target="_blank" href="project 1.html">AI Assistant</a></button>
+        <button><a target="_blank" href="project 2.html">Calculator</a></button>
+        <button><a target="_blank" href="project 3.html">Weather App</a></button>
+        <button><a target="_blank" href="project 4.html">Music Player</a></button>
+    </div>
+    </section>
+    <section>
+        <h2>Game Section </h2>
+        <div class="games">
+        <button><a target="_blank" href="game 1.html">Tic Tac Toe</a></button>
+        <button><a target="_blank" href="game 2.html">Rock Paper Scissors</a></button>   
+        <button><a target="_blank" href="game 3.html">Car racing game</a></button>
+
+    </section><br><br>
+    <footer>
+    <a target="faq" href="faq.html">FAQ</a>
+    <a target="terms" href="terms.html">Terms of Service</a>
+    <a target="privacy" href="privacy.html">Privacy Policy</a>
+    <a target="contact" href="contact us.html">Contact Us</a>
+    <a target="support" href="support.html">Support</a>
+    <div class="social-links">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1H2Q9ZzCih/" title="Facebook">f</a>
+                    <a href="https://twitter.com/" title="Twitter">𝕏</a>
+                    <a href="https://www.linkedin.com/" title="LinkedIn">in</a>
+                    <a href="https://www.instagram.com/singh__aman22?igsh=emw3YWl3Ymd4Zjky" title="Instagram">📷</a>
+                </div>
+        <p>&copy; 2024 Hello World. All rights reserved.</p>
+        <p>Made with ❤️ by Aman</p>
+        </footer>
+    </body>
+</html>

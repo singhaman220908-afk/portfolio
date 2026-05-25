@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Music Player</title>
+
+<style>
+
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+}
+
+.player{
+    width:320px;
+    background:#1e293b;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+img{
+    width:100%;
+    border-radius:20px;
+}
+
+h2{
+    margin-top:15px;
+}
+
+.controls{
+    margin-top:20px;
+}
+
+button{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    font-size:20px;
+    margin:10px;
+    cursor:pointer;
+    background:#2563eb;
+    color:white;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="player">
+
+<img src="https://picsum.photos/300">
+
+<h2>Dream Music</h2>
+
+<p>Unknown Artist</p>
+
+<audio id="song">
+
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+
+</audio>
+
+<div class="controls">
+
+<button onclick="playSong()">▶</button>
+
+<button onclick="pauseSong()">⏸</button>
+
+</div>
+
+</div>
+
+<script>
+
+let song = document.getElementById("song");
+
+function playSong(){
+    song.play();
+}
+
+function pauseSong(){
+    song.pause();
+}
+
+</script>
+
+</body>
+</html>

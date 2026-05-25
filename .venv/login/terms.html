@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#020617;
+    color:white;
+}
+
+/* SECTION */
+
+.terms{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.terms h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.terms p{
+    color:#94a3b8;
+    margin-bottom:50px;
+}
+
+/* GRID */
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* CARDS */
+
+.card{
+    background:#0f172a;
+    border:1px solid #1e293b;
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+    text-align:left;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#38bdf8;
+    box-shadow:0 0 20px rgba(56,189,248,0.4);
+}
+
+.card h2{
+    color:#38bdf8;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.7;
+    font-size:15px;
+}
+
+/* UPDATE BAR */
+
+.update-box{
+    margin-top:60px;
+    max-width:700px;
+    margin-inline:auto;
+    background:#0f172a;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #1e293b;
+}
+
+.update-box h2{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.update-badge{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 22px;
+    border-radius:30px;
+    background:#38bdf8;
+    color:white;
+    font-weight:bold;
+    box-shadow:0 0 15px rgba(56,189,248,0.5);
+}
+
+/* CONTACT FORM */
+
+.contact{
+    margin-top:70px;
+    max-width:700px;
+    margin-inline:auto;
+    background:#0f172a;
+    padding:35px;
+    border-radius:20px;
+    border:1px solid #1e293b;
+}
+
+.contact h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+}
+
+.contact button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact button:hover{
+    background:#0ea5e9;
+}
+
+/* ACCEPT TERMS */
+
+.accept{
+    margin-top:50px;
+    font-size:18px;
+}
+
+.accept input{
+    margin-right:10px;
+    transform:scale(1.3);
+}
+
+/* FLOATING ICON */
+
+.icon{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#38bdf8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    box-shadow:0 0 20px rgba(56,189,248,0.5);
+}
+
+</style>
+</head>
+<body>
+
+<section class="terms">
+
+    <h1>Terms of Service</h1>
+    <p>Please read these terms carefully before using the website.</p>
+
+    <div class="container">
+
+        <!-- USAGE RULES -->
+
+        <div class="card">
+            <h2>📜 Usage Rules</h2>
+            <p>
+                Users must use this website responsibly and respectfully.
+                Do not misuse website features or disrupt services.
+            </p>
+        </div>
+
+        <!-- ACCOUNT RESPONSIBILITY -->
+
+        <div class="card">
+            <h2>🔐 Account Responsibility</h2>
+            <p>
+                Users are responsible for protecting their login credentials
+                and maintaining account security at all times.
+            </p>
+        </div>
+
+        <!-- PROHIBITED ACTIONS -->
+
+        <div class="card">
+            <h2>🚫 Prohibited Actions</h2>
+            <p>
+                Hacking, spam, abuse, unauthorized copying, malicious
+                activities or harmful behavior are strictly prohibited.
+            </p>
+        </div>
+
+        <!-- CONTENT OWNERSHIP -->
+
+        <div class="card">
+            <h2>💻 Content Ownership</h2>
+            <p>
+                All projects, code, designs and website content belong
+                to the website owner unless stated otherwise.
+            </p>
+        </div>
+
+        <!-- DISCLAIMER -->
+
+        <div class="card">
+            <h2>⚠️ Disclaimer</h2>
+            <p>
+                This website is provided “as is” without warranties.
+                We are not responsible for temporary downtime or issues.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- TERMS UPDATE -->
+
+    <div class="update-box">
+
+        <h2>🔄 Terms Updates</h2>
+
+        <p>
+            Terms and conditions may be updated anytime to improve
+            services, security and user experience.
+        </p>
+
+        <div class="update-badge">
+            Last Updated: May 2026
+        </div>
+
+    </div>
+
+    <!-- ACCEPT TERMS -->
+
+    <div class="accept">
+        <label>
+            <input type="checkbox">
+            I agree to the Terms of Service
+        </label>
+    </div>
+
+    <!-- LEGAL CONTACT -->
+
+    <div class="contact">
+
+        <h2>📧 Legal Contact</h2>
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea rows="5" placeholder="Write your legal concern..."></textarea>
+
+        <button>Send Message</button>
+
+    </div>
+
+</section>
+
+<!-- FLOATING ICON -->
+
+<div class="icon">
+    ⚖️
+</div>
+
+</body>
+</html>

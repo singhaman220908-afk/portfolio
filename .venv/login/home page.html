@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio Hero Section</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#ffffff;
+      color:#111;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:60px 8%;
+      gap:60px;
+      flex-wrap:wrap;
+    }
+
+    /* LEFT IMAGE */
+
+    .hero-image{
+      flex:1;
+      display:flex;
+      justify-content:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:550px;
+    }
+
+    /* RIGHT CONTENT */
+
+    .hero-content{
+      flex:1;
+      min-width:300px;
+    }
+
+    .hero-content h1{
+      font-size:65px;
+      line-height:1.1;
+      margin-bottom:25px;
+      font-weight:900;
+    }
+
+    .hero-content p{
+      color:#555;
+      font-size:18px;
+      line-height:1.8;
+      margin-bottom:35px;
+    }
+
+    /* BUTTONS */
+
+    .buttons{
+      display:flex;
+      gap:20px;
+      align-items:center;
+    }
+
+    .btn{
+      padding:14px 28px;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+      text-decoration:none;
+    }
+
+    .resume-btn{
+      background:#111;
+      color:white;
+    }
+
+    .resume-btn:hover{
+      background:#333;
+    }
+
+    .contact-btn{
+      color:#111;
+      font-weight:bold;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      padding:20px;
+      border-top:1px solid #ddd;
+      color:#555;
+      font-size:15px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .hero-content h1{
+        font-size:45px;
+      }
+
+      .buttons{
+        justify-content:center;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <!-- LEFT IMAGE -->
+
+    <div class="hero-image">
+
+      <img src="https://cdni.iconscout.com/illustration/premium/thumb/programmer-working-on-laptop-illustration-download-in-svg-png-gif-file-formats--developer-coding-programming-pack-design-development-illustrations-5737497.png" alt="Developer Illustration">
+
+    </div>
+
+    <!-- RIGHT CONTENT -->
+
+    <div class="hero-content">
+
+      <h1>
+        Turning Vision Into Reality
+        With Code And Design.
+      </h1>
+
+      <p>
+        As a software developer, I focus on transforming ideas into reliable and scalable web applications. 
+        I enjoy full stack development to build practical, high-impact solutions.
+      </p>
+
+      <div class="buttons">
+
+        <a href="resume.html" class="btn resume-btn" target="_blank">
+          View Resume
+
+        <a href="contact us.html" class="btn contact-btn">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    Build With ❤️Aman singh
+  </footer>
+
+</body>
+</html>

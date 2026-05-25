@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Chatbot UI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.chat-container{
+    width:380px;
+    height:600px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+    display:flex;
+    flex-direction:column;
+}
+
+.chat-header{
+    background:#2563eb;
+    color:white;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.chat-header img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+.chat-header h2{
+    font-size:20px;
+}
+
+.chat-box{
+    flex:1;
+    padding:20px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.message{
+    max-width:75%;
+    padding:12px 15px;
+    border-radius:18px;
+    font-size:15px;
+    line-height:22px;
+    animation:fadeIn 0.3s ease;
+}
+
+.bot{
+    background:#334155;
+    color:white;
+    align-self:flex-start;
+    border-bottom-left-radius:5px;
+}
+
+.user{
+    background:#2563eb;
+    color:white;
+    align-self:flex-end;
+    border-bottom-right-radius:5px;
+}
+
+.chat-input{
+    display:flex;
+    padding:15px;
+    background:rgba(255,255,255,0.05);
+}
+
+.chat-input input{
+    flex:1;
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:#1e293b;
+    color:white;
+    font-size:15px;
+}
+
+.chat-input button{
+    margin-left:10px;
+    padding:12px 18px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.chat-input button:hover{
+    transform:scale(1.05);
+    background:#1d4ed8;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png">
+        <h2>AI Assistant</h2>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+
+        <div class="message bot">
+            Hello 👋 <br>
+            How can I help you today?
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input type="text" id="userInput" placeholder="Type a message...">
+
+        <button onclick="sendMessage()">Send</button>
+
+    </div>
+
+</div>
+
+<script>
+
+function sendMessage(){
+
+    let input = document.getElementById("userInput");
+    let chatBox = document.getElementById("chatBox");
+
+    if(input.value.trim() === ""){
+        return;
+    }
+
+    // User Message
+    let userMessage = document.createElement("div");
+    userMessage.classList.add("message","user");
+    userMessage.innerHTML = input.value;
+
+    chatBox.appendChild(userMessage);
+
+    // Bot Reply
+    setTimeout(() => {
+
+        let botMessage = document.createElement("div");
+        botMessage.classList.add("message","bot");
+
+        botMessage.innerHTML = "🤖 I'm still learning AI responses!";
+
+        chatBox.appendChild(botMessage);
+
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+    },1000);
+
+    input.value = "";
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tic Tac Toe AI</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+}
+
+h1{
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+.game{
+    display:grid;
+    grid-template-columns:repeat(3,120px);
+    gap:10px;
+}
+
+.box{
+    width:120px;
+    height:120px;
+    border:none;
+    border-radius:15px;
+    background:#334155;
+    color:white;
+    font-size:50px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.box:hover{
+    background:#475569;
+    transform:scale(1.05);
+}
+
+#status{
+    margin-top:20px;
+    font-size:25px;
+}
+
+#reset{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#reset:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🤖 Tic Tac Toe AI</h1>
+
+<div class="game">
+
+<button class="box"></button>
+<button class="box"></button>
+<button class="box"></button>
+
+<button class="box"></button>
+<button class="box"></button>
+<button class="box"></button>
+
+<button class="box"></button>
+<button class="box"></button>
+<button class="box"></button>
+
+</div>
+
+<p id="status">Your Turn (X)</p>
+
+<button id="reset">Restart Game</button>
+
+<script>
+
+let boxes = document.querySelectorAll(".box");
+let statusText = document.getElementById("status");
+let resetBtn = document.getElementById("reset");
+
+let board = ["","","","","","","","",""];
+let gameOver = false;
+
+const player = "X";
+const ai = "O";
+
+const winPatterns = [
+
+[0,1,2],
+[3,4,5],
+[6,7,8],
+
+[0,3,6],
+[1,4,7],
+[2,5,8],
+
+[0,4,8],
+[2,4,6]
+
+];
+
+boxes.forEach((box,index)=>{
+
+    box.onclick = function(){
+
+        if(board[index] === "" && !gameOver){
+
+            makeMove(index,player);
+
+            if(!gameOver){
+
+                statusText.innerHTML = "AI Thinking...";
+
+                setTimeout(aiMove,700);
+
+            }
+
+        }
+
+    }
+
+});
+
+function makeMove(index,currentPlayer){
+
+    board[index] = currentPlayer;
+
+    boxes[index].innerHTML = currentPlayer;
+
+    checkWinner(currentPlayer);
+
+}
+
+function aiMove(){
+
+    let emptyBoxes = [];
+
+    board.forEach((value,index)=>{
+
+        if(value === ""){
+            emptyBoxes.push(index);
+        }
+
+    });
+
+    if(emptyBoxes.length === 0) return;
+
+    let randomIndex = emptyBoxes[Math.floor(Math.random() * emptyBoxes.length)];
+
+    makeMove(randomIndex,ai);
+
+    if(!gameOver){
+        statusText.innerHTML = "Your Turn (X)";
+    }
+
+}
+
+function checkWinner(currentPlayer){
+
+    for(let pattern of winPatterns){
+
+        let [a,b,c] = pattern;
+
+        if(
+            board[a] &&
+            board[a] === board[b] &&
+            board[a] === board[c]
+        ){
+
+            statusText.innerHTML = 
+            currentPlayer === player
+            ? "🎉 You Win!"
+            : "🤖 AI Wins!";
+
+            gameOver = true;
+
+            return;
+        }
+
+    }
+
+    if(!board.includes("")){
+
+        statusText.innerHTML = "😎 It's a Draw!";
+        gameOver = true;
+
+    }
+
+}
+
+resetBtn.onclick = function(){
+
+    board = ["","","","","","","","",""];
+
+    boxes.forEach((box)=>{
+        box.innerHTML = "";
+    });
+
+    gameOver = false;
+
+    statusText.innerHTML = "Your Turn (X)";
+
+}
+
+</script>
+
+</body>
+</html>

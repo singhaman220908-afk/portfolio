@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ Section</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#020617;
+    color:white;
+}
+
+/* FAQ SECTION */
+
+.faq-section{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.faq-section h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.faq-section p{
+    color:#94a3b8;
+    margin-bottom:50px;
+}
+
+/* FAQ CONTAINER */
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+/* FAQ CARD */
+
+.faq{
+    background:#0f172a;
+    border:1px solid #1e293b;
+    border-radius:15px;
+    margin-bottom:20px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.faq:hover{
+    border-color:#38bdf8;
+    box-shadow:0 0 15px rgba(56,189,248,0.3);
+}
+
+/* QUESTION */
+
+.question{
+    padding:20px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    color:#38bdf8;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* ANSWER */
+
+.answer{
+    padding:0 20px 20px;
+    display:none;
+    color:#cbd5e1;
+    line-height:1.7;
+    text-align:left;
+}
+
+/* ACTIVE */
+
+.faq.active .answer{
+    display:block;
+}
+
+/* CATEGORY TITLE */
+
+.category{
+    margin:40px 0 20px;
+    font-size:28px;
+    color:#ffffff;
+    text-align:left;
+}
+
+/* FLOATING CHAT BUTTON */
+
+.chat-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+}
+
+.chat-btn button{
+    padding:15px 25px;
+    border:none;
+    border-radius:50px;
+    background:#38bdf8;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    box-shadow:0 0 15px rgba(56,189,248,0.5);
+}
+
+.chat-btn button:hover{
+    background:#0ea5e9;
+}
+
+</style>
+</head>
+<body>
+
+<section class="faq-section">
+
+    <h1>FAQ Hub</h1>
+    <p>Frequently asked questions and answers.</p>
+
+    <div class="faq-container">
+
+        <!-- ABOUT YOU -->
+
+        <h2 class="category">👨‍💻 About You</h2>
+
+        <div class="faq">
+            <div class="question">
+                Who are you?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                I am a passionate web developer and designer creating modern and creative websites.
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                What skills do you have?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                HTML, CSS, JavaScript, UI Design, Responsive Design and AI-integrated web development.
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                Which technologies do you use?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                I use HTML, CSS, JavaScript, APIs, AI tools and modern frontend technologies.
+            </div>
+        </div>
+
+        <!-- PROJECTS -->
+
+        <h2 class="category">💼 Projects</h2>
+
+        <div class="faq">
+            <div class="question">
+                Are your projects open source?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                Some projects are open source while others are private client projects.
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                Can I hire you?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                Yes, you can contact me for freelance or collaboration opportunities.
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                Do you make custom websites?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                Yes, I create fully custom and responsive websites according to user requirements.
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+
+        <h2 class="category">📧 Contact</h2>
+
+        <div class="faq">
+            <div class="question">
+                How can I contact you?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                You can contact me using the support form or social media links available on the website.
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                How fast do you reply?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                Usually within 24 hours depending on workload and availability.
+            </div>
+        </div>
+
+        <!-- SECURITY -->
+
+        <h2 class="category">🔒 Security</h2>
+
+        <div class="faq">
+            <div class="question">
+                Is user data safe?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                Yes, user information is protected using secure systems and privacy measures.
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                Do you store personal information?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                Only necessary information required for communication and website functionality.
+            </div>
+        </div>
+
+        <!-- AI FEATURES -->
+
+        <h2 class="category">🤖 AI Features</h2>
+
+        <div class="faq">
+            <div class="question">
+                Does the website use AI?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                Yes, some features may use AI to improve user experience and support services.
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                How does the chatbot work?
+                <span>+</span>
+            </div>
+            <div class="answer">
+                The chatbot uses AI-based responses to answer common questions instantly.
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FLOATING CHAT BUTTON -->
+
+<div class="chat-btn">
+    <button>💬 Live FAQ Chat</button>
+</div>
+
+<script>
+
+const faqs = document.querySelectorAll(".faq");
+
+faqs.forEach(faq => {
+    faq.addEventListener("click", () => {
+        faq.classList.toggle("active");
+    });
+});
+
+</script>
+
+</body>
+</html>

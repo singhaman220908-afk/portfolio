@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy Hub</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#020617;
+    color:white;
+}
+
+/* SECTION */
+
+.privacy{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.privacy h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.privacy p{
+    color:#94a3b8;
+    margin-bottom:50px;
+}
+
+/* GRID */
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* CARD */
+
+.card{
+    background:#0f172a;
+    border:1px solid #1e293b;
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    text-align:left;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#38bdf8;
+    box-shadow:0 0 20px rgba(56,189,248,0.4);
+}
+
+.card h2{
+    color:#38bdf8;
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.7;
+    font-size:15px;
+}
+
+/* SECURITY STATUS */
+
+.status{
+    margin-top:60px;
+    max-width:700px;
+    margin-inline:auto;
+    background:#0f172a;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #1e293b;
+}
+
+.status h2{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.progress{
+    width:100%;
+    height:22px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:15px;
+}
+
+.progress-bar{
+    width:95%;
+    height:100%;
+    background:#22c55e;
+}
+
+.badge{
+    margin-top:20px;
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:30px;
+    background:#22c55e;
+    color:white;
+    font-weight:bold;
+    box-shadow:0 0 15px rgba(34,197,94,0.5);
+}
+
+/* CONTACT FORM */
+
+.contact{
+    margin-top:70px;
+    max-width:700px;
+    margin-inline:auto;
+    background:#0f172a;
+    padding:35px;
+    border-radius:20px;
+    border:1px solid #1e293b;
+}
+
+.contact h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+}
+
+.contact button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact button:hover{
+    background:#0ea5e9;
+}
+
+/* FLOATING LOCK */
+
+.lock{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#38bdf8;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    box-shadow:0 0 20px rgba(56,189,248,0.5);
+}
+
+</style>
+</head>
+<body>
+
+<section class="privacy">
+
+    <h1>Privacy Policy Hub</h1>
+    <p>Your security and privacy are our top priority.</p>
+
+    <div class="container">
+
+        <!-- DATA PROTECTION -->
+
+        <div class="card">
+            <h2>🔒 Data Protection</h2>
+            <p>
+                Your information is encrypted and securely stored.
+                We use advanced protection systems to keep your
+                personal data safe from unauthorized access.
+            </p>
+        </div>
+
+        <!-- COOKIE POLICY -->
+
+        <div class="card">
+            <h2>🍪 Cookie Policy</h2>
+            <p>
+                Cookies help improve your browsing experience,
+                remember preferences and analyze website traffic
+                for better performance and personalization.
+            </p>
+        </div>
+
+        <!-- USER RIGHTS -->
+
+        <div class="card">
+            <h2>📄 User Rights</h2>
+            <p>
+                Users can request to update, download or delete
+                their personal information anytime through the
+                privacy support team.
+            </p>
+        </div>
+
+        <!-- AI TRANSPARENCY -->
+
+        <div class="card">
+            <h2>🤖 AI Transparency</h2>
+            <p>
+                AI chatbot conversations may be used to improve
+                support quality and user experience while keeping
+                sensitive data protected.
+            </p>
+        </div>
+
+        <!-- THIRD PARTY -->
+
+        <div class="card">
+            <h2>🌐 Third Party Services</h2>
+            <p>
+                This website may use Google Fonts, analytics tools,
+                APIs and third-party services to improve features,
+                security and overall website performance.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- SECURITY STATUS -->
+
+    <div class="status">
+
+        <h2>🛡️ Security Status</h2>
+
+        <p>Protection Level</p>
+
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+
+        <div class="badge">
+            Website Protected
+        </div>
+
+    </div>
+
+    <!-- CONTACT PRIVACY TEAM -->
+
+    <div class="contact">
+
+        <h2>📧 Contact Privacy Team</h2>
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <textarea rows="5" placeholder="Your privacy concern..."></textarea>
+
+        <button>Send Request</button>
+
+    </div>
+
+</section>
+
+<!-- FLOATING LOCK ICON -->
+
+<div class="lock">
+    🔒
+</div>
+
+</body>
+</html>

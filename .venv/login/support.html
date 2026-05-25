@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart AI Support Hub</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#020617;
+    color:white;
+}
+
+/* SECTION */
+
+.support{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.support h1{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.support p{
+    color:#94a3b8;
+    margin-bottom:40px;
+}
+
+/* GRID */
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* CARDS */
+
+.card{
+    background:#0f172a;
+    border:1px solid #1e293b;
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#38bdf8;
+    box-shadow:0 0 20px rgba(56,189,248,0.4);
+}
+
+.card h2{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 22px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+}
+
+/* CHATBOT */
+
+.chat-box{
+    margin-top:15px;
+}
+
+.chat-box input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin-top:10px;
+    background:#1e293b;
+    color:white;
+}
+
+/* FAQ */
+
+.faq{
+    margin-top:15px;
+    text-align:left;
+}
+
+.faq details{
+    background:#1e293b;
+    padding:12px;
+    border-radius:10px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+/* CONTACT FORM */
+
+.contact{
+    margin-top:70px;
+    max-width:700px;
+    margin-inline:auto;
+    background:#0f172a;
+    padding:35px;
+    border-radius:20px;
+    border:1px solid #1e293b;
+}
+
+.contact h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+}
+
+.contact button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.contact button:hover{
+    background:#0ea5e9;
+}
+
+/* STATUS */
+
+.status{
+    margin-top:60px;
+    max-width:700px;
+    margin-inline:auto;
+    background:#0f172a;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #1e293b;
+}
+
+.progress{
+    width:100%;
+    height:20px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:15px;
+}
+
+.progress-bar{
+    width:90%;
+    height:100%;
+    background:#38bdf8;
+}
+
+/* STARS */
+
+.rating{
+    margin-top:60px;
+}
+
+.stars{
+    font-size:40px;
+    color:gold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.stars:hover{
+    transform:scale(1.1);
+}
+
+/* LIVE BUTTON */
+
+.live-support{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+}
+
+.live-support button{
+    padding:15px 25px;
+    border:none;
+    border-radius:50px;
+    background:#22c55e;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 0 15px rgba(34,197,94,0.5);
+}
+
+.live-support button:hover{
+    background:#16a34a;
+}
+
+</style>
+</head>
+<body>
+
+<section class="support">
+
+    <h1>Smart AI Support Hub</h1>
+    <p>Modern support system for your users.</p>
+
+    <div class="container">
+
+        <!-- AI CHATBOT -->
+
+        <div class="card">
+            <h2>AI Chatbot</h2>
+            <p>Ask questions instantly using AI support.</p>
+
+            <div class="chat-box">
+                <input type="text" placeholder="Type your message...">
+            </div>
+
+            <a href="#" class="btn">Ask AI</a>
+        </div>
+
+        <!-- FAQ -->
+
+        <div class="card">
+            <h2>FAQ</h2>
+
+            <div class="faq">
+
+                <details>
+                    <summary>How do I contact support?</summary>
+                    <p>Email us anytime.</p>
+                </details>
+
+                <details>
+                    <summary>How fast is response time?</summary>
+                    <p>Usually within 24 hours.</p>
+                </details>
+
+                <details>
+                    <summary>Can I report bugs?</summary>
+                    <p>Yes, using the bug report section.</p>
+                </details>
+
+            </div>
+        </div>
+
+        <!-- BUG REPORT -->
+
+        <div class="card">
+            <h2>Bug Report</h2>
+            <p>Found an issue? Help improve the website.</p>
+
+            <a href="#" class="btn">Report Bug</a>
+        </div>
+
+    </div>
+
+    <!-- CONTACT FORM -->
+
+    <div class="contact">
+
+        <h2>Contact Support</h2>
+
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+
+        <textarea rows="5" placeholder="Describe your issue"></textarea>
+
+        <button>Send Message</button>
+
+    </div>
+
+    <!-- SYSTEM STATUS -->
+
+    <div class="status">
+
+        <h2>System Status</h2>
+
+        <p>Server Performance</p>
+
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+
+        <p style="margin-top:15px;color:#22c55e;">
+            ● All Systems Operational
+        </p>
+
+    </div>
+
+    <!-- FEEDBACK -->
+
+    <div class="rating">
+
+        <h2>Rate Our Support</h2>
+
+        <div class="stars">
+            ★ ★ ★ ★ ★
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LIVE SUPPORT BUTTON -->
+
+<div class="live-support">
+    <button>💬 Live Support</button>
+</div>
+
+</body>
+</html>

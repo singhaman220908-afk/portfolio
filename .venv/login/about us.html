@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio About Page</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#fff;
+      color:#111;
+      padding:40px 8%;
+    }
+
+    h1{
+      text-align:center;
+      font-size:70px;
+      margin-bottom:60px;
+      font-weight:900;
+    }
+
+    /* ABOUT SECTION */
+
+    .about-container{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:50px;
+      flex-wrap:wrap;
+      margin-bottom:100px;
+    }
+
+    .about-text{
+      flex:1;
+      min-width:300px;
+    }
+
+    .about-text h3{
+      margin-bottom:20px;
+      font-size:25px;
+    }
+
+    .about-text p{
+      line-height:1.8;
+      margin-bottom:20px;
+      color:#444;
+      font-size:18px;
+    }
+
+    .highlight{
+      color:#c25c5c;
+      font-weight:bold;
+    }
+
+    .about-image{
+      flex:1;
+      display:flex;
+      justify-content:center;
+    }
+
+    .about-image img{
+      width:320px;
+      border-radius:20px;
+      border:3px solid #222;
+      padding:10px;
+    }
+
+    .stats{
+      display:flex;
+      flex-direction:column;
+      gap:50px;
+      text-align:center;
+    }
+
+    .stats h2{
+      font-size:60px;
+      font-weight:900;
+    }
+
+    .stats p{
+      color:#555;
+      font-size:20px;
+    }
+
+    /* SKILLS SECTION */
+
+    .section-title{
+      text-align:center;
+      font-size:60px;
+      margin-bottom:50px;
+      font-weight:900;
+    }
+
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+      margin-bottom:100px;
+    }
+
+    .skill-box{
+      border:1px solid #eee;
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .skill-box h3{
+      color:#b55b87;
+      margin-bottom:20px;
+      font-size:26px;
+    }
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .tag{
+      background:#111;
+      color:white;
+      padding:10px 16px;
+      border-radius:25px;
+      font-size:14px;
+    }
+
+    /* EDUCATION */
+
+    .education{
+      max-width:900px;
+      margin:auto;
+    }
+
+    .timeline{
+      position:relative;
+      padding-left:50px;
+      border-left:4px solid #222;
+    }
+
+    .edu-item{
+      margin-bottom:50px;
+      position:relative;
+    }
+
+    .edu-item::before{
+      content:"";
+      position:absolute;
+      left:-62px;
+      top:5px;
+      width:22px;
+      height:22px;
+      background:#fff;
+      border:5px solid #c15b90;
+      border-radius:50%;
+    }
+
+    .edu-item h3{
+      font-size:30px;
+      margin-bottom:8px;
+    }
+
+    .edu-item p{
+      color:#555;
+      line-height:1.7;
+      font-size:18px;
+    }
+
+    @media(max-width:900px){
+
+      h1{
+        font-size:45px;
+      }
+
+      .section-title{
+        font-size:40px;
+      }
+
+      .about-container{
+        flex-direction:column;
+      }
+
+      .stats{
+        flex-direction:row;
+        justify-content:center;
+        width:100%;
+      }
+
+      .stats h2{
+        font-size:40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ABOUT -->
+
+  <h1>Scalable Systems</h1>
+
+  <section class="about-container">
+
+    <div class="about-text">
+
+      <h3>ABOUT ME</h3>
+
+      <p>
+        Hi, I'm Aman Singh, a 
+        <span class="highlight">Full Stack Engineer</span>
+        focused on building scalable backend systems and real-world products.
+      </p>
+
+      <p>
+        I work extensively with 
+        <span class="highlight">Node.js, TypeScript, and React</span>
+        to design performant APIs and production-grade applications.
+      </p>
+
+      <p>
+        I enjoy solving 
+        <span class="highlight">complex engineering problems</span>
+        and building systems that are reliable, scalable, and easy to extend.
+      </p>
+
+    </div>
+
+    <div class="about-image">
+      <img src="img.png.jpeg" alt="Profile Image">
+    </div>
+
+    <div class="stats">
+      <div>
+        <h2>Achievements</h2>
+        <p>coming soon</p>
+      </div>
+
+      <div>
+        <h2>Project completed</h2>
+        <p>1+</p>
+      </div>
+
+      <div>
+        <h2>Year Of Experience</h2>
+        <p>fresher</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <h2 class="section-title">Technical Skills</h2>
+
+  <section class="skills-grid">
+
+    <div class="skill-box">
+      <h3>Backend & Systems</h3>
+
+      <div class="tags">
+        <span class="tag">JavaScript</span>
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <h3>Frontend</h3>
+
+      <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <h3>Databases & Caching</h3>
+
+      <div class="tags">
+        <span class="tag">MYSQL</span>
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <h3>Cloud & DevOps</h3>
+
+      <div class="tags">
+        <span class="tag">Git</span>
+        <span class="tag">GitHub</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+
+  <h2 class="section-title">Education</h2>
+
+  <section class="education">
+
+    <div class="timeline">
+
+      <div class="edu-item">
+        <h3>Master Of Science In Artificial Intelligence And Machine Learning</h3>
+        <p>coming soon</p>
+        <p></p>
+      </div>
+
+      <div class="edu-item">
+        <h3>Bachelor Of Science In Artificial Intelligence And Machine Learning</h3>
+        <p>In Progress</p>
+        <p></p>
+      </div>
+
+      <div class="edu-item">
+        <h3>SSC (10th)</h3>
+        <p>2023-2024 | sadhu vaswani high school, Mumbai</p>
+        <p>Percentage: 63.00%</p>
+      </div>
+
+      <div class="edu-item">
+        <h3>HSC (12th)</h3>
+        <p>2025-2026 | shree sanatan dharam vidyalay and jr college, Mumbai</p>
+        <p>Percentage: 61.00%</p>
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
